@@ -1,0 +1,10 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+echo 1 > /sys/class/leds/wooya_system_led/brightness
+echo timer > /sys/class/leds/wooya_system_led/trigger
+
+/usr/sbin/fournet &
+
+export HOME=/root
+exit 0
