@@ -1,0 +1,563 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=file5361.htm>
+<link rel=File-List href="file5361.files/filelist.xml">
+</head>
+
+<body lang=zh-CN style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:10.3222in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:4.5875in'>
+
+<p style='margin:0in;font-family:微软雅黑;font-size:20.0pt'><span lang=zh-CN>设置</span><span
+lang=en-US> OPENWRT + MY7628</span><span lang=zh-CN>通信</span></p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0423in;margin-left:0in;width:1.5979in'>
+
+<p style='margin:0in;font-size:10.0pt;color:#767676'><span style='font-family:
+Calibri'>2018</span><span style='font-family:"Microsoft YaHei"'>年</span><span
+style='font-family:Calibri'>7</span><span style='font-family:"Microsoft YaHei"'>月</span><span
+style='font-family:Calibri'>6</span><span style='font-family:"Microsoft YaHei"'>日</span></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>11:30</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.8083in;margin-left:0in;width:10.3222in'>
+
+<ol type=1 style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt'>设置开发环境</span></li>
+ <ol type=a style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+  margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;
+  font-weight:normal;font-style:normal'>
+  <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>我用的</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> win10 linux </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>子系统，</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>ubuntu16.04</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>，当然可以采用虚拟机等手段。</span></li>
+  <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>为了安装环境的需要，可以将</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>ubuntu</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>软件源进行更新为国内镜像源。我这里选择清华大学网管协会的镜像源。<br>
+            </span><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/"><span
+      style='font-family:Calibri;font-size:11.0pt' lang=zh-CN>https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</span></a><span
+      style='font-family:Calibri;font-size:11.0pt' lang=en-US> </span></li>
+  <ol type=i style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;
+   font-weight:normal;font-style:normal'>
+   <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+       normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>修改</span><span
+       style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+       normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> </span></li>
+  </ol>
+ </ol>
+</ol>
+
+<p style='margin:0in;margin-left:1.125in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>/etc/apt/sources.list</span><span lang=en-US> </span><span
+lang=zh-CN>为如下内容</span></p>
+
+<p style='margin:0in;margin-left:1.125in;font-family:Menlo;font-size:9.75pt;
+color:#333333'><span style='background:whitesmoke'># 默认注释了源码镜像以提高 apt update
+速度，如有需要可自行取消注释<br>
+deb </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial main restricted universe
+multiverse<br>
+# deb-src </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial main restricted universe
+multiverse<br>
+deb </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-updates main restricted universe
+multiverse<br>
+# deb-src </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-updates main restricted universe
+multiverse<br>
+deb </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-backports main restricted universe
+multiverse<br>
+# deb-src </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-backports main restricted universe
+multiverse<br>
+deb </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-security main restricted universe
+multiverse<br>
+# deb-src </span><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"><span
+style='background:whitesmoke'>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</span></a><span
+style='background:whitesmoke'> xenial-security main restricted universe
+multivers</span></p>
+
+<ol type=i style='margin-left:1.125in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:9.5pt;font-weight:
+ normal;font-style:normal'>
+ <li value=2 style='margin-top:0;margin-bottom:0;vertical-align:middle;
+     color:#333333'><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:
+     normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt;color:black'
+     lang=zh-CN>更新源<br>
+          </span><span style='font-family:微软雅黑;font-size:8.5pt;font-weight:
+     normal;font-style:normal;font-family:微软雅黑;font-size:8.5pt;color:#333333;
+     background:whitesmoke' lang=en-US>#yujc@desktop: </span><span
+     style='font-family:Menlo;font-size:9.75pt;font-weight:normal;font-style:
+     normal;font-family:Menlo;font-size:9.75pt;color:#333333;background:whitesmoke'
+     lang=en-US>sudo apt-get update</span></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle;color:#333333'><span
+     style='font-family:微软雅黑;font-size:11.0pt;color:black' lang=zh-CN>安装</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;color:black' lang=en-US>openwrt</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;color:black' lang=zh-CN>依赖</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:1.125in;color:#333333'><span style='font-family:
+微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>#yujc@desktop: </span><span
+style='font-family:Menlo;font-size:9.75pt;background:whitesmoke' lang=zh-CN>sudo
+apt-get install git-core build-essential libssl-dev libncurses5-dev unzip</span></p>
+
+<p style='margin:0in;margin-left:1.125in;color:#333333'><span style='font-family:
+微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>#yujc@desktop: </span><span
+style='font-family:Menlo;font-size:9.75pt;background:whitesmoke' lang=zh-CN>sudo
+apt-get install subversion mercurial</span></p>
+
+<p style='margin:0in;margin-left:1.125in;color:#333333'><span style='font-family:
+微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>#yujc@desktop: </span><span
+style='font-family:Menlo;font-size:9.75pt;background:whitesmoke' lang=zh-CN>sudo
+apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext
+texinfo unzip sharutils subversion libncurses5-dev ncurses-term zlib1g-dev</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=en-US><span style='mso-spacerun:yes'> </span></span><span lang=zh-CN>至此，开发环境配置完毕</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<ol type=1 style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=2 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>编译</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>Openwrt</span></li>
+ <ol type=a style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+  margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;
+  font-weight:normal;font-style:normal'>
+  <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>首先下载</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> Openwrt </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>源码，为了支持</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>4G</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>模块，这里下载</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>淘宝卖家</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>无涯物联网</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>的源码，采用的是</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> openwrt15.05</span></li>
+ </ol>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;color:#333333'><span style='font-family:
+微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='font-family:Menlo;font-size:9.5pt;background:whitesmoke' lang=en-US>:
+git clone </span><a
+href="https://github.com/hi-wooya/openwrt-hiwooya-stable.git"><span
+style='font-family:Menlo;font-size:9.5pt;background:whitesmoke' lang=zh-CN>https://github.com/hi-wooya/openwrt-hiwooya-stable.git</span></a></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:9.5pt;font-weight:
+ normal;font-style:normal'>
+ <li value=2 style='margin-top:0;margin-bottom:0;vertical-align:middle;
+     color:#333333'><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:
+     normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt;color:black'
+     lang=zh-CN>进入</span><span style='font-family:微软雅黑;font-size:11.0pt;
+     font-weight:normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt;
+     color:black' lang=en-US> Openwrt </span><span style='font-family:微软雅黑;
+     font-size:11.0pt;font-weight:normal;font-style:normal;font-family:微软雅黑;
+     font-size:11.0pt;color:black' lang=zh-CN>工程文件夹</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;color:#333333'><span style='font-family:
+微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='font-family:微软雅黑;font-size:8.5pt;background:whitesmoke' lang=zh-CN>：</span><span
+style='font-family:微软雅黑;font-size:8.5pt;background:whitesmoke' lang=en-US>cd </span><span
+style='font-family:Menlo;font-size:9.5pt;background:whitesmoke' lang=zh-CN>openwrt-hiwooya-stable</span></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:9.5pt;font-weight:
+ normal;font-style:normal'>
+ <li value=3 style='margin-top:0;margin-bottom:0;vertical-align:middle;
+     color:#333333'><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:
+     normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt;color:black'>然后更新一些功能文件（如果不需要额外功能，该步骤可以跳过）</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:8.5pt;
+color:#333333'><span style='background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='background:whitesmoke' lang=zh-CN>：./scripts/feeds update -a</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:8.5pt;
+color:#333333'><span style='background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='background:whitesmoke' lang=zh-CN>：./scripts/feeds </span><span
+style='background:whitesmoke' lang=en-US>install </span><span style='background:
+whitesmoke' lang=zh-CN>-a</span></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:8.5pt;font-weight:
+ normal;font-style:normal'>
+ <li value=4 style='margin-top:0;margin-bottom:0;vertical-align:middle;
+     color:#333333'><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:
+     normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt;color:black'>对内核进行一些配置</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-size:8.5pt;color:#333333'><span
+style='font-family:微软雅黑;background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='font-family:微软雅黑;background:whitesmoke' lang=zh-CN>：</span><span
+style='font-family:Calibri;background:whitesmoke' lang=en-US>make menuconfig</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>该步骤会生成</span><span lang=en-US> .config </span><span lang=zh-CN>文件，可以先用我们预先生成好的</span><span
+lang=en-US> .config </span><span lang=zh-CN>文件进行替换。</span><span lang=en-US> </span></p>
+
+<p style='margin:0in;margin-left:.75in'>&lt;&lt;conf_file&gt;&gt;</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>将</span><span lang=en-US> </span><span lang=zh-CN>该文件重命名即可。</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>具体的配置可以参考</span><span lang=en-US>pdf</span><span lang=zh-CN>文件</span></p>
+
+<p style='margin:0in;margin-left:.75in'>&lt;&lt;博晶网络开发板基础配置说明.pdf&gt;&gt;</p>
+
+<p style='margin:0in;margin-left:.75in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>1.6</span><span style='font-family:微软雅黑'
+lang=zh-CN>部分。和视频教程《</span><span style='font-family:"Microsoft YaHei"'
+lang=zh-CN>第</span><span style='font-family:Calibri' lang=zh-CN>6</span><span
+style='font-family:"Microsoft YaHei"' lang=zh-CN>课 配置编译</span><span
+style='font-family:Calibri' lang=zh-CN>OpenWrt</span><span style='font-family:
+"Microsoft YaHei"' lang=zh-CN>源码程序</span><span style='font-family:Calibri'
+lang=zh-CN>.mp4</span><span style='font-family:微软雅黑' lang=zh-CN>》</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=en-US>ps</span><span lang=zh-CN>。可以添加自己需要的组件，比如选中</span><span lang=en-US>
+network -&gt; vnstat </span><span lang=zh-CN>组件可以将</span><span lang=en-US>vnstat</span><span
+lang=zh-CN>命令编译进内核。用来流量统计。</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=en-US>Ps2</span><span lang=zh-CN>。可以自己对文件进行配置，当系统启动后</span><span
+lang=en-US> /etc/config/network </span><span lang=zh-CN>文件对网络进行配置，在编译过程中可以修改该文件。</span><span
+lang=en-US> </span><span lang=zh-CN>编译过程的文件路径为</span><span lang=en-US>
+file/etc/config/network </span><span lang=zh-CN>。</span><span lang=en-US> </span><span
+lang=zh-CN>同理，可以在内核编译阶段对</span><span lang=en-US> </span><span lang=zh-CN>其他文件，比如</span><span
+lang=en-US> firewall</span><span lang=zh-CN>，</span><span lang=en-US> rc.local </span><span
+lang=zh-CN>进行修改。</span></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=5 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt'>配置完成过后，对内核进行编译</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'>该过程中，会下载一些文件，导致编译过程会持续几天。</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>下载的文件会在</span><span lang=en-US> openwrt </span><span lang=zh-CN>目录</span><span
+lang=en-US> ./dl </span><span lang=zh-CN>文件夹下。</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>可以把我已经下好的</span><span lang=en-US> dl </span><span lang=zh-CN>文件夹中的文件拷贝到</span><span
+lang=en-US> openwrt </span><span lang=zh-CN>目录中，之后进行编译，编译命令如下</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-size:8.5pt;color:#333333'><span
+style='font-family:微软雅黑;background:whitesmoke' lang=en-US>#yujc@desktop</span><span
+style='font-family:微软雅黑;background:whitesmoke' lang=zh-CN>：</span><span
+style='font-family:Calibri;background:whitesmoke' lang=en-US>make </span><span
+style='font-family:微软雅黑;background:whitesmoke' lang=en-US>V=s</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-size:11.0pt'><span
+style='font-family:微软雅黑' lang=zh-CN>基本上需要编译</span><span style='font-family:
+Calibri' lang=en-US>4</span><span style='font-family:微软雅黑' lang=zh-CN>个小时，左右，如果中途报错，可以上</span><span
+style='font-family:微软雅黑' lang=en-US> </span><span style='font-family:微软雅黑'
+lang=zh-CN>无涯物联网</span><span style='font-family:微软雅黑' lang=en-US> </span><span
+style='font-family:微软雅黑' lang=zh-CN>的论坛发帖求助。网站为</span><span style='font-family:
+Calibri' lang=zh-CN>http://www.hi-wooya.com/forum.php</span></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:Calibri;font-size:11.0pt;
+ font-weight:normal;font-style:normal'>
+ <li value=6 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>将编译完成后的内核烧录板卡中，烧录板卡需要连接办卡串口，波特率</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> 57600</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>。</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>推荐采用</span><span lang=en-US> tftp </span><span lang=zh-CN>的烧录方式。</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-size:11.0pt'><span
+style='font-family:微软雅黑'>步骤比较复杂，推荐视频教程《</span><span style='font-family:"Microsoft YaHei"'>第</span><span
+style='font-family:Calibri'>8</span><span style='font-family:"Microsoft YaHei"'>课
+如何通过</span><span style='font-family:Calibri'>TFTP</span><span style='font-family:
+"Microsoft YaHei"'>方式烧写</span><span style='font-family:Calibri'>OpenWrt</span><span
+style='font-family:"Microsoft YaHei"'>固件</span><span style='font-family:Calibri'>.mp4</span><span
+style='font-family:微软雅黑'>》。</span></p>
+
+<p style='margin:0in;margin-left:.75in'>&lt;&lt;第8课
+如何通过TFTP方式烧写OpenWrt固件.mp4&gt;&gt;</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>注意，我们只需要烧录固件，不需要烧录</span><span lang=en-US> uboot</span><span
+lang=zh-CN>。千万别轻易烧写</span><span lang=en-US> uboot</span><span lang=zh-CN>。因为如果</span><span
+lang=en-US> uboot </span><span lang=zh-CN>烧写错误，板卡将无法正确启动</span><span
+lang=en-US> tftp </span><span lang=zh-CN>客户端。就只能通过编程器进行烧写了，然而，我们并没有编程器。</span></p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=7 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt'>之后，系统就启动了。</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>可以按照普通</span><span lang=en-US> linux </span><span lang=zh-CN>的方式，对系统进行定制了。</span></p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<ol type=1 style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:Calibri;font-size:11.0pt;
+ font-weight:normal;font-style:normal'>
+ <li value=3 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt'>关于自动映射</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>摄像头插在</span><span lang=en-US> </span><span lang=zh-CN>板子上的</span><span
+lang=en-US> IP </span><span lang=zh-CN>地址是</span><span lang=en-US> 10.10.1.8</span><span
+lang=zh-CN>，如果将两个网口都配成</span><span lang=en-US> LAN </span><span lang=zh-CN>口，电脑接入另一个</span><span
+lang=en-US>LAN</span><span lang=zh-CN>口。电脑和摄像头处于同一个子网，网关为路由器地址</span><span
+lang=en-US> 10.10.1.1 </span><span lang=zh-CN>，电脑地址假设为</span><span lang=en-US>
+10.10.1.3</span><span lang=zh-CN>。</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>在电脑</span><span lang=en-US>IE</span><span lang=zh-CN>浏览器中，直接输入</span><span
+lang=en-US> 10.10.1.8 </span><span lang=zh-CN>可以进入摄像头管理界面。</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>在非局域网环境中，为了能够</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'
+lang=en-US>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=zh-CN>在编译过程中我修改的文件有</span><span lang=en-US> </span></p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'><span
+lang=en-US>/etc/config/network </span><span lang=zh-CN>修改</span><span
+lang=en-US> </span><span lang=zh-CN>内网地址</span><span lang=en-US> 10.10.1.8</span></p>
+
+<p style='margin:0in;margin-left:.375in'><span style='font-family:微软雅黑;
+font-size:11.0pt' lang=en-US>/etc/config</span><span style='font-family:Calibri;
+font-size:11.0pt' lang=en-US>/</span><span style='font-family:Calibri;
+font-size:13.0pt' lang=en-US>firewall </span><span style='font-family:微软雅黑;
+font-size:11.0pt' lang=zh-CN>修改</span><span style='font-family:微软雅黑;font-size:
+11.0pt' lang=en-US> </span><span style='font-family:微软雅黑;font-size:11.0pt'
+lang=zh-CN>策略，运行</span><span style='font-family:微软雅黑;font-size:11.0pt'
+lang=en-US> ssh </span><span style='font-family:微软雅黑;font-size:11.0pt'
+lang=zh-CN>登录</span><span style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>
+22 </span><span style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>端口。</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>/etc/config/dropbear </span><span
+style='font-family:微软雅黑' lang=zh-CN>修改</span><span style='font-family:微软雅黑'
+lang=en-US> Interface </span><span style='font-family:微软雅黑' lang=zh-CN>允许</span><span
+style='font-family:微软雅黑' lang=en-US> wan </span><span style='font-family:微软雅黑'
+lang=zh-CN>访问（可以再修改成</span><span style='font-family:微软雅黑' lang=en-US> 4g)</span><span
+style='font-family:微软雅黑' lang=zh-CN>。</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:微软雅黑' lang=zh-CN>采用</span><span style='font-family:Calibri'
+lang=en-US>autossh</span><span style='font-family:微软雅黑' lang=zh-CN>来实现</span><span
+style='font-family:微软雅黑' lang=en-US>ssh</span><span style='font-family:微软雅黑'
+lang=zh-CN>隧道的自动登录和重启</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:微软雅黑' lang=zh-CN>修改了整个</span><span style='font-family:微软雅黑'
+lang=en-US> autossh </span><span style='font-family:微软雅黑' lang=zh-CN>的启动脚本</span><span
+style='font-family:Calibri' lang=en-US>,</span><span style='font-family:微软雅黑'
+lang=zh-CN>在</span><span style='font-family:微软雅黑' lang=en-US> </span><a
+href="https://github.com/yujincheng/openwrt-autossh-15.05"><span
+style='font-family:Calibri' lang=en-US>https://github.com/yujincheng/openwrt-autossh-15.05</span></a><span
+style='font-family:Calibri' lang=en-US> ,</span><span style='font-family:微软雅黑'
+lang=zh-CN>编译完成后会自动产生</span><span style='font-family:微软雅黑' lang=en-US>
+/etc/init.d/autossh </span><span style='font-family:微软雅黑' lang=zh-CN>和</span><span
+style='font-family:微软雅黑' lang=en-US> /etc/config/autossh</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>/etc/</span><span style='font-family:
+微软雅黑' lang=en-US>shadow</span><span style='font-family:微软雅黑' lang=zh-CN>，修改初始</span><span
+style='font-family:微软雅黑' lang=en-US> root </span><span style='font-family:微软雅黑'
+lang=zh-CN>密码为</span><span style='font-family:微软雅黑' lang=en-US> love</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>/root/.ssh/known_hosts </span><span
+style='font-family:微软雅黑' lang=zh-CN>存储服务器的公钥</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>/etc/dropbear/dropbear_rsa_host_key </span><span
+style='font-family:微软雅黑' lang=zh-CN>变成我们专用的私钥，公钥拷贝在服务器上。</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-size:11.0pt'><span
+style='font-family:Calibri' lang=en-US>/etc/</span><span style='font-family:
+微软雅黑' lang=en-US>rc.local </span><span style='font-family:微软雅黑' lang=zh-CN>开机启动</span><span
+style='font-family:微软雅黑' lang=en-US> fournet</span><span style='font-family:
+微软雅黑' lang=zh-CN>，并且</span><span style='font-family:微软雅黑' lang=en-US> export
+HOME=/root </span><span style='font-family:微软雅黑' lang=zh-CN>这个命令是让</span><span
+style='font-family:微软雅黑' lang=en-US> dropbear </span><span style='font-family:
+微软雅黑' lang=zh-CN>的</span><span style='font-family:微软雅黑' lang=en-US>ssh</span><span
+style='font-family:微软雅黑' lang=zh-CN>服务可以正常启动，是</span><span style='font-family:
+微软雅黑' lang=en-US>dropbear </span><span style='font-family:微软雅黑' lang=zh-CN>的一个</span><span
+style='font-family:微软雅黑' lang=en-US>bug</span><span style='font-family:微软雅黑'
+lang=zh-CN>。</span><span style='font-family:微软雅黑' lang=en-US>issue</span><span
+style='font-family:微软雅黑' lang=zh-CN>在这里：</span><span style='font-family:Calibri'
+lang=zh-CN>https://github.com/openwrt/packages/issues/5559</span></p>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>如果系统更换了服务器地址，需要</p>
+
+<ol type=1 style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:Calibri;font-size:11.0pt' lang=en-US>openwrt</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>修改</span><span
+     style='font-family:Calibri;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:Calibri;font-size:11.0pt' lang=en-US>/root/.ssh/known_hosts
+     </span><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;
+     font-style:normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>存储服务器的公钥。一般可以用</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>ssh</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>命令登录一次，会自动生成。</span></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>将</span><span
+     style='font-family:微软雅黑;font-size:11.0pt' lang=en-US> openwrt </span><span
+     style='font-family:Calibri;font-size:11.0pt' lang=en-US>/etc/dropbear/dropbear_rsa_host_key
+     </span><span style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>的私钥生成对应公钥，公钥拷贝在服务器上。</span></li>
+</ol>
+
+<p style='margin:0in;font-family:微软雅黑;font-size:11.0pt' lang=en-US>&nbsp;</p>
+
+<ol type=1 style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=4 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>关于</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>WIFI</span></li>
+ <ol type=a style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+  margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;
+  font-weight:normal;font-style:normal'>
+  <li value=1 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>将驱动程序源码，</span><span
+      style='font-family:Calibri;font-size:11.0pt;font-weight:normal;
+      font-style:normal;font-family:Calibri;font-size:11.0pt' lang=en-US>hiwooya-wifi-7028</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>解压到，</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>openwrt </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>编译目录</span><span
+      style='font-family:Calibri;font-size:11.0pt;font-weight:normal;
+      font-style:normal;font-family:Calibri;font-size:11.0pt' lang=en-US>,</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>生成文件</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> </span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>为</span><span
+      style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+      normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>
+      /etc/config/wireless/</span><span style='font-family:微软雅黑;font-size:11.0pt;
+      font-weight:normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt'
+      lang=zh-CN>，可以通过修改该配置文件。</span></li>
+ </ol>
+</ol>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'
+lang=en-US>&nbsp;</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>已使用 Microsoft OneNote 2016 创建。</p>
+
+</div>
+
+</body>
+
+</html>
