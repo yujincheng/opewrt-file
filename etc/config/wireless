@@ -1,0 +1,24 @@
+config wifi-device  ra0
+	option type     ralink
+	option mode 	9
+	option channel  auto
+	option txpower 100
+	option ht 	20
+	option country US
+	
+# REMOVE THIS LINE TO ENABLE WIFI:
+	option disabled 0	
+	
+config wifi-iface
+	option device   ra0
+	option network  lan	
+	option mode     ap
+	option ssid     yujc_test
+	option encryption psk2
+	option key tk123456
+	option ApCliEnable '1'
+	option ApCliSsid 'tk_info'
+	option ApCliAuthMode 'WPA2PSK'
+	option ApCliEncrypType 'AES'
+	option ApCliPassWord 'tk123456'
+	
