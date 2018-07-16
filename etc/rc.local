@@ -7,4 +7,9 @@ echo timer > /sys/class/leds/wooya_system_led/trigger
 /usr/sbin/fournet &
 
 export HOME=/root
+
+/etc/init.d/dropbear start
+
+/usr/bin/stty -F /dev/ttyS1 raw 115200 -echo
+
 exit 0

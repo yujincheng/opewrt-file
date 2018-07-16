@@ -6,8 +6,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=OneNote.File>
 <meta name=Generator content="Microsoft OneNote 15">
-<link id=Main-File rel=Main-File href=file5361.htm>
-<link rel=File-List href="file5361.files/filelist.xml">
+<link id=Main-File rel=Main-File href="config_OPENWRT+MY7628.htm">
+<link rel=File-List href="config_OPENWRT+MY7628.files/filelist.xml">
 </head>
 
 <body lang=zh-CN style='font-family:Calibri;font-size:11.0pt'>
@@ -531,10 +531,89 @@ lang=zh-CN>https://github.com/openwrt/packages/issues/5559</span></p>
       /etc/config/wireless/</span><span style='font-family:微软雅黑;font-size:11.0pt;
       font-weight:normal;font-style:normal;font-family:微软雅黑;font-size:11.0pt'
       lang=zh-CN>，可以通过修改该配置文件。</span></li>
+  <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>通过配置该文件可以完成</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>wifi</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>的各项功能。</span></li>
+  <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>其中</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>ssid</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>表示</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>wifi</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>路由器作为</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US> AP</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>的功能。接入到路由器的设备会接入到虚拟网卡</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US> br-lan</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>，对应</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US> /etc/config/network</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>中的</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=en-US>lan</span><span
+      style='font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>接口。</span></li>
  </ol>
 </ol>
 
-<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+<p style='margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt'>option
+ssid<span style='mso-spacerun:yes'>     </span>yujc_test</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt'>option
+encryption psk2</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt'>option
+key tk123456</p>
+
+<ol type=a style='margin-left:.75in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in;font-family:微软雅黑;font-size:11.0pt;font-weight:
+ normal;font-style:normal'>
+ <li value=4 style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>其中</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> ApClientSsid </span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>表示</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>WIFI</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>客户端作为</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> client </span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>接入到上级路由器中。</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US>client</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>设备的网卡为</span><span
+     style='font-family:Calibri;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:Calibri;font-size:11.0pt' lang=zh-CN>apcli0</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>，对应</span><span
+     style='font-family:Calibri;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:Calibri;font-size:11.0pt' lang=en-US>/etc/config/network
+     </span><span style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;
+     font-style:normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>中的</span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=en-US> wwan </span><span
+     style='font-family:微软雅黑;font-size:11.0pt;font-weight:normal;font-style:
+     normal;font-family:微软雅黑;font-size:11.0pt' lang=zh-CN>接口。</span></li>
+</ol>
+
+<p style='margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt'>option
+ApCliEnable '1'</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>option ApCliSsid 'tk_info'</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>option ApCliAuthMode 'WPA2PSK'</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>option ApCliEncrypType 'AES'</p>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>option ApCliPassWord 'tk123456'</p>
+
+<p style='margin:0in;margin-left:.75in;font-family:微软雅黑;font-size:11.0pt'
+lang=en-US>&nbsp;</p>
 
 <p style='margin:0in;margin-left:.375in;font-family:微软雅黑;font-size:11.0pt'>&nbsp;</p>
 
